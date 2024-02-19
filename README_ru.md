@@ -86,10 +86,16 @@ CMD ["dotnet", "run", "--jsonrpcserverenabled=true", "--enablegpu=false", "--dat
 #### Сборка образа и запуск контейнера с кошельком:
 
 ```bash
-docker build --target wallet .
+docker build --target wallet -t wasabi_wallet .
 
-docker run -d --name wasabi-wallet -p 37128:37128 wallet
+docker run -d -p 37128:37128/tcp --name wasabi_container wasabi_wallet
 
+```
+
+#### Проверка логов кошелька:
+
+```bash
+docker logs -f wasabi_container
 ```
 
 ## Использование нашего клиента.

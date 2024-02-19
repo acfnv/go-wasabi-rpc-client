@@ -86,10 +86,16 @@ Detailed information about wallet startup parameters is available [here](https:/
 #### Building the image and running the container with the wallet:
 
 ```bash
-docker build --target wallet .
+docker build --target wallet -t wasabi_wallet .
 
-docker run -d --name wasabi-wallet -p 37128:37128 wallet
+docker run -d -p 37128:37128/tcp --name wasabi_container wasabi_wallet
 
+```
+
+#### Check the wallet logs:
+
+```bash
+docker logs -f wasabi_container
 ```
 
 ## Using our client.
