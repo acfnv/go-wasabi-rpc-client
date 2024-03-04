@@ -19,7 +19,7 @@ Go Wasabi RPC Client
 # Implementation of a client for interacting with WasabiWallet via RPC in the Go programming language.
 
 You can use this client to interact with WasabiWallet via RPC.
-The current version of the client supports all methods used in WasabiWallet in the main repository branch as of February 16, 2024. This means that some methods are not yet available in the current wallet release and are partially absent from the RPC documentation on the WasabiWallet website.
+The current version of the client supports all methods used in WasabiWallet in the main repository branch. This means that some methods are not yet available in the current wallet release and are partially absent from the RPC documentation on the WasabiWallet website.
 
 The client can be used with WasabiWallet, both when running in GUI mode and as a headless daemon.
 
